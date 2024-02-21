@@ -183,3 +183,10 @@ class HATModel(SRModel):
                 self._update_best_metric_result(dataset_name, metric, self.metric_results[metric], current_iter)
 
             self._log_validation_metric_values(current_iter, dataset_name, tb_logger)
+
+
+
+
+# Assuming HATModel is defined as above
+
+scripted_model = torch.jit.script(HATModel())

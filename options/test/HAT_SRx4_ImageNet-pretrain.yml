@@ -6,10 +6,9 @@ manual_seed: 0
 
 datasets:
   test_1:  # the 1st test dataset
-    name: Set5
-    type: PairedImageDataset
-    dataroot_gt: ./datasets/Set5/GTmod4
-    dataroot_lq: ./datasets/Set5/LRbicx4
+    name: custom
+    type: SingleImageDataset
+    dataroot_lq: /media/josh/data1/PycharmProjects/HAT/test_Image
     io_backend:
       type: disk
 
@@ -76,12 +75,12 @@ val:
   save_img: true
   suffix: ~  # add suffix to saved images, if None, use exp name
 
-  metrics:
-    psnr: # metric name, can be arbitrary
-      type: calculate_psnr
-      crop_border: 4
-      test_y_channel: true
-    ssim:
-      type: calculate_ssim
-      crop_border: 4
-      test_y_channel: true
+#  metrics:
+#    psnr: # metric name, can be arbitrary
+#      type: calculate_psnr
+#      crop_border: 4
+#      test_y_channel: true
+#    ssim:
+#      type: calculate_ssim
+#      crop_border: 4
+#      test_y_channel: true
