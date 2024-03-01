@@ -189,4 +189,3 @@ class HATModel(SRModel):
 
 # Assuming HATModel is defined as above
 
-scripted_model = torch.jit.script(HATModel())
