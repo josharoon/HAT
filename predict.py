@@ -4,7 +4,8 @@ import shutil
 import os
 from PIL import Image
 import subprocess
-from cog import BasePredictor, Input, Path
+from cog import BasePredictor, Input#, Path
+from pathlib import Path
 
 
 class Predictor(BasePredictor):
@@ -48,3 +49,7 @@ class Predictor(BasePredictor):
             shutil.rmtree("results")
 
         return output_path
+
+if __name__ == "__main__":
+    predictor = Predictor()
+    predictor.predict(image=r"D:\HAT\test_Image\OST_009_crop_LR.png")
